@@ -18,7 +18,7 @@ Simply download zipped project, unpack it.
 ### Step 2. 
 Open project in Visual Studio 2022 and compice it. 
 
-### Step 2. 
+### Step 3. 
 Lunch Viewer service in Visual Studio and test it.. 
 
 
