@@ -24,6 +24,7 @@ function requestControl() {
 
     this.requestInfo = function (sourceInfo) {
         request = sourceInfo
+        $('.qbbutton').addClass('disable');
         var action = 'home/get' + sourceInfo + 'info';
         $("body").css("cursor", "wait");
         $.ajax({
@@ -35,11 +36,13 @@ function requestControl() {
             .done(function (result) {
                 $("body").css("cursor", "default");
                 self.showInfo(result);
+                $('.qbbutton').removeClass('disable');
             })
             .fail(function (xhr, ajaxOptions, thrownError) {
                 $("body").css("cursor", "default");
                 var err = eval("(" + xhr.responseText + ")");
                 message.Danger(err.detail);
+                $('.qbbutton').removeClass('disable');
             });
     };
     this.showInfo = function (result) {
