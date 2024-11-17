@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<AssemblyName>ABCS.Prism.Extension</AssemblyName>
+		<RootNamespace>Prism</RootNamespace>
+		<ApplicationIcon>ProjectWorks.ico</ApplicationIcon>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+		<ImportLibs>net</ImportLibs>
+		<Configurations>Debug;Release</Configurations>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Version>8.0.1</Version>
+		<Authors>Yury Shestopalov</Authors>
+		<Company>ABCS</Company>
+		<Product>ABCS.Prism.Extension.Core</Product>
+		<Description>Prism extension</Description>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Prism.Core" Version="[8.1.97]" />
+		<PackageReference Include="Unity" Version="5.11.10" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+</Project>

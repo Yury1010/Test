@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<AssemblyName>ABCS.Test.Infrastructure</AssemblyName>
+		<RootNamespace>ABCS.Test.Infrastructure</RootNamespace>
+		<ApplicationIcon>ProjectWorks.ico</ApplicationIcon>
+		<AnalysisMode>AllEnabledByDefault</AnalysisMode>
+		<Version>1.0.0</Version>
+		<Authors>Yury Shestopalov</Authors>
+		<Company>ABCS</Company>
+	</PropertyGroup>
+
+	<ItemGroup>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Prism.Extension\Prism.Extension.csproj" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<NoWarn>$(NoWarn)CA1819;CA1056;CA1819;CA1707;CA1711;CA1716;CA1040;CA1848;CA2254;IDE1006;IDE0130;CA1707;</NoWarn>
+	</PropertyGroup>
+
+
+</Project>

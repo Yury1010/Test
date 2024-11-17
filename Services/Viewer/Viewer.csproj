@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+	  <TargetFramework>net9.0-windows</TargetFramework>
+	  <AssemblyName>ABCS.Test.Web.Viewer</AssemblyName>
+	  <RootNamespace>ABCS.Test.Web.Viewer</RootNamespace>
+	  <ApplicationIcon>ProjectWorks.ico</ApplicationIcon>
+	  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+	  <Version>1.0.0</Version>
+	  <Authors>Yury Shestopalov</Authors>
+	  <Company>ABCS</Company>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="8.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
+		<PackageReference Include="System.Text.Encodings.Web" Version="8.0.0" />
+		<PackageReference Include="Unity.Microsoft.DependencyInjection" Version="5.11.5" />
+	</ItemGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Modules\Communication\Communication.csproj" />
+  </ItemGroup>
+
+	<PropertyGroup>
+		<NoWarn>$(NoWarn)CA1819;CA1056;CA1819;CA1707;CA1711;CA1716;CA1040;CA1848;CA2254;IDE1006;IDE0130;CA1707;CA1515;</NoWarn>
+	</PropertyGroup>
+
+</Project>

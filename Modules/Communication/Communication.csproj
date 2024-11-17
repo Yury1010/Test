@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	  <PropertyGroup>
+		  <TargetFramework>net9.0</TargetFramework>
+		  <AssemblyName>ABCS.Test.Module.Communication</AssemblyName>
+		  <RootNamespace>ABCS.Test.Module.Communication</RootNamespace>
+		  <ApplicationIcon>ProjectWorks.ico</ApplicationIcon>
+		  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+		  <Version>1.0.0</Version>
+		  <Authors>Yury Shestopalov</Authors>
+		  <Company>ABCS</Company>
+	  </PropertyGroup>
+
+	  <ItemGroup>
+	    <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.0" />
+	  </ItemGroup>
+
+	  <ItemGroup>
+	    <ProjectReference Include="..\..\Infrastructure\Infrastructure.csproj" />
+	  </ItemGroup>
+
+	  <ItemGroup>
+	    <Reference Include="Interop.QBXMLRP2">
+	      <HintPath>C:\Program Files\Common Files\Intuit\QuickBooks\Interop.QBXMLRP2.dll</HintPath>
+	    </Reference>
+	  </ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<PropertyGroup>
+		<NoWarn>$(NoWarn)CA1819;CA1056;CA1819;CA1707;CA1711;CA1716;CA1040;CA1848;CA2254;IDE1006;IDE0130;CA1707;</NoWarn>
+	</PropertyGroup>
+
+</Project>
