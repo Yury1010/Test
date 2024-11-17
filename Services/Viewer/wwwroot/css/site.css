@@ -61,3 +61,10 @@ body {
         border: 1px solid gray;
         padding-left: 10px;
     }
+
+    .card > .qbbutton.disable {
+        pointer-events: none;
+        text-decoration: none;
+        color: dimgray;
+        border: 1px solid dimgray;
+    }
